@@ -64,5 +64,7 @@ contract MyContract is ERC721 {
         tokenId++;
     }
 
-    function tokenUri(uint _tokenId) {}
+    function tokenUri(uint _tokenId) public view returns (Color[] memory) {
+        return allTokens[_tokenId];
+    }
 }
